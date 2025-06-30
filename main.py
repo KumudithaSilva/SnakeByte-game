@@ -1,4 +1,3 @@
-#  TODO 6. Detect Collision with Wall
 #  TODO 7. Detect Collision with snake tail
 
 from turtle import Screen, Turtle
@@ -38,6 +37,13 @@ while game_is_on:
         food.refresh()
         #  TODO 5. Create Scoreboard
         score.score_update()
+
+    #  TODO 6. Detect Collision with Wall
+    if (snake.head.xcor() > 280 or snake.head.xcor() < -280
+            or snake.head.ycor() > 280 or snake.head.ycor() < -280):
+        game_is_on = False
+        score.game_over()
+
 
 screen.exitonclick()
 
