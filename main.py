@@ -1,10 +1,10 @@
-#  TODO 5. Create Scoreboard
 #  TODO 6. Detect Collision with Wall
 #  TODO 7. Detect Collision with snake tail
 
-from turtle import Screen
+from turtle import Screen, Turtle
 
 from food import Food
+from scoreboard import Score
 from snake import  Snake
 import time
 
@@ -17,6 +17,7 @@ screen.tracer(0)
 #  TODO 1. Create the snake body
 snake = Snake()
 food = Food()
+score = Score()
 
 #  TODO 2. Move the snake with events
 screen.listen()
@@ -35,16 +36,8 @@ while game_is_on:
     if snake.head.distance(food) < 15:
         #  TODO 3. Generate Random Food on Screen
         food.refresh()
-
-
-
-
-
-
-
-
-
-
+        #  TODO 5. Create Scoreboard
+        score.score_update()
 
 screen.exitonclick()
 
