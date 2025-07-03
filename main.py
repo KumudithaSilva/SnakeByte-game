@@ -1,5 +1,3 @@
-#  TODO 7. Detect Collision with snake tail
-
 from turtle import Screen, Turtle
 
 from food import Food
@@ -35,6 +33,7 @@ while game_is_on:
     if snake.head.distance(food) < 15:
         #  TODO 3. Generate Random Food on Screen
         food.refresh()
+        snake.extend_segment()
         #  TODO 5. Create Scoreboard
         score.score_update()
 
@@ -43,6 +42,14 @@ while game_is_on:
             or snake.head.ycor() > 280 or snake.head.ycor() < -280):
         game_is_on = False
         score.game_over()
+
+    #  TODO 7. Detect Collision with snake tail
+    for segments in snake.segment:
+        if segments == snake.head:
+            pass
+        elif snake.head.distance(segments) < 10:
+            game_is_on = False
+            score.game_over()
 
 
 screen.exitonclick()
