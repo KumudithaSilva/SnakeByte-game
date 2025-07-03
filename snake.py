@@ -1,4 +1,4 @@
-from turtle import Turtle
+from turtle import Turtle, Screen
 
 MOVE_DISTANCE = 20
 START_POSITION = [(0, 0), (-20, 0), (-40, 0)]
@@ -9,8 +9,8 @@ RIGHT = 360
 
 class Snake:
     def __init__(self):
-        self.snake_color = "green"
-        self.snake_shape = "square"
+        self.snake_color = "blue"
+        self.snake_shape = "square.gif"
         self.segment = []
         self.create_snake()
         self.head = self.segment[0]

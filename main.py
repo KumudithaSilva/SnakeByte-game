@@ -6,7 +6,11 @@ from snake import  Snake
 import time
 
 screen = Screen()
-screen.bgcolor("black")
+
+screen.register_shape('square.gif')
+screen.register_shape('easter-egg.gif')
+screen.bgpic("snake-game.gif")
+
 screen.setup(width=600, height=600)
 screen.title("Snake Byte Game")
 screen.tracer(0)
