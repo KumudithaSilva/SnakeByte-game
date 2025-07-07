@@ -8,8 +8,8 @@ import time
 screen = Screen()
 
 screen.register_shape('square.gif')
-screen.register_shape('easter-egg.gif')
-screen.bgpic("snake-game.gif")
+screen.register_shape('snake_food.gif')
+screen.bgpic("background.gif")
 
 screen.setup(width=600, height=600)
 screen.title("Snake Byte Game")
