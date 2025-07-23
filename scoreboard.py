@@ -2,7 +2,7 @@ from turtle import  Turtle
 ALIGNMENT = "center"
 FONT = ("Courier", 20, "bold")
 GAME_OVER_FONT = ("Courier", 35, "bold")
-FILE_NAME = "data.txt"
+FILE_NAME = "game_data/data.txt"
 
 class Score(Turtle):
 
